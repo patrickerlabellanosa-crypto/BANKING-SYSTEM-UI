@@ -73,7 +73,7 @@ class BankingSystem:
         self.btn_balance = tk.Button(
             root,
             text="Show Balance",
-            bg="#4a5568",
+            bg="#26547C",
             command=self.toggle_balance, 
             **btn_config
         )
@@ -82,7 +82,7 @@ class BankingSystem:
         self.btn_deposit = tk.Button(
             root,
             text="Deposit Money",
-            bg="#38a169",
+            bg="#26547C",
             command=self.deposit,
             **btn_config
         )
@@ -91,7 +91,7 @@ class BankingSystem:
         self.btn_withdraw = tk.Button(
             root,
             text="Withdraw Money",
-            bg="#e53e3e",
+            bg="#FF6B6B",
             command=self.withdraw,
             **btn_config
         )
@@ -100,7 +100,7 @@ class BankingSystem:
         self.btn_history = tk.Button(
             root,
             text="Transaction History",
-            bg="#d69e2e",
+            bg="#26547C",
             command=self.show_history,
             **btn_config
         )
@@ -168,10 +168,10 @@ class BankingSystem:
             else:
                 self.balance -= amount
                 
-                self.history.append(f"Withdrew: -₱{amount:,.2f}")
+                self.history.append(f"Withdraw: -₱{amount:,.2f}")
                 
                 messagebox.showinfo(
-                    "Success", f"Successfully withdrew ₱{amount:,.2f}"
+                    "Success", f"Successfully withdraw ₱{amount:,.2f}"
                 )
                 self.amount_entry.delete(0, tk.END)
                 self.update_balance_ui()
